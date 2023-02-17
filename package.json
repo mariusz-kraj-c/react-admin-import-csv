@@ -1,9 +1,9 @@
 {
   "name": "react-admin-import-csv",
-  "version": "4.0.0",
+  "version": "1.0.0",
   "description": "CSV import button for react-admin",
-  "repository": "https://github.com/benwinding/react-admin-import-csv",
-  "homepage": "https://github.com/benwinding/react-admin-import-csv",
+  "repository": "https://github.com/mariusz-kraj-c/react-admin-import-csv",
+  "homepage": "https://github.com/mariusz-kraj-c/react-admin-import-csv",
   "author": "Ben Winding",
   "license": "MIT",
   "private": false,
