@@ -34,33 +34,3 @@ jobs:
       with:
         name: build-lib
         path: lib
-
-  deploy:
-    needs: build
-    name: Deploy Library
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 16.18.1
-    - uses: actions/cache@v1
-      id: cache-modules
-      with:
-        path: node_modules
-        key: ${{ runner.OS }}-build-${{ hashFiles('package.json') }}
-    - name: Download build-lib
-      uses: actions/download-artifact@v2
-      with:
-        name: build-lib
-        path: lib
-    - name: Download build-esm
-      uses: actions/download-artifact@v2
-      with:
-        name: build-esm
-        path: esm
-    - name: Deploy to NPM! 🚀
-      uses: benwinding/merge-release@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

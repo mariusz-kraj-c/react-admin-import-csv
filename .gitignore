@@ -1,7 +1,4 @@
 node_modules
-dist
-esm
-lib
 yarn*
 !yarn.lock
 coverage/*
